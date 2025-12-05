@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Emmanuel Rueda – Data Visualization & Storytelling Portfolio</title>
+  <title>Emmanuel Rueda Escalona – Data Visualization Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     /* ===== COLOR PALETTE (Minimalist Professional) =====
@@ -131,4 +131,297 @@
       margin-top: 0.8rem;
     }
 
-    .project-d
+    .project-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 70ch;
+      color: #333333;
+    }
+
+    .project-tags {
+      font-size: 0.85rem;
+      color: #555555;
+    }
+
+    .project-tags span {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid #D0D5D9;
+      padding: 0.2rem 0.7rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      background: #FAFAFA;
+    }
+
+    .project-actions {
+      margin-top: 0.4rem;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #005F73;
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #005F73;
+      background: #FFFFFF;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.1s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .btn-link:hover {
+      background: #0A9396;
+      color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+    }
+
+    .project-thumb {
+      margin-top: 0.8rem;
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding-bottom: 3rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #777777;
+      border-top: 1px solid #D4D4D4;
+    }
+
+    footer a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      color: #005F73;
+    }
+
+    footer a:hover {
+      border-bottom-color: #0A9396;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+      max-width: 70ch;
+      line-height: 1.5;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      header {
+        padding-top: 2rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .project {
+        padding: 1.1rem 1.2rem 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Data Visualization Portfolio</h2>
+  <h1>Emmanuel Rueda Escalona</h1>
+  <p>
+    Business Intelligence & Data Analytics leader and MBAI student at Ontario Tech University.
+    This page showcases selected work from the “Data Visualization & Storytelling” course,
+    curated as a professional portfolio for future employers and collaborators.
+  </p>
+  <p class="tagline">
+    4 course assignments + 2 tutorial-based projects · Focus on clarity, narrative, and visual craft.
+  </p>
+</header>
+
+<main>
+  <section class="projects">
+    <div class="section-label">Featured work</div>
+    <h3 class="section-title">Course assignments</h3>
+
+    <!-- ASSIGNMENT 1 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 1 – [Project Title]</h4>
+        <div class="project-meta">Exploratory data visualization · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          High-level summary of Assignment 1. This paragraph should briefly explain the dataset,
+          the main questions you explored, and how the visuals support a clear analytical story.
+          Keep it to 3–5 lines, focusing on what a hiring manager would care about.
+        </p>
+        <div class="project-tags">
+          <span>Exploratory analysis</span>
+          <span>Data cleaning</span>
+          <span>Chart design</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- Optional thumbnail -->
+        <!-- <img class="project-thumb" src="img/a1_thumbnail.png" alt="Assignment 1 preview" /> -->
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 2 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 2 – [Project Title]</h4>
+        <div class="project-meta">Redesign / critique · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 2. Describe what you redesigned or critiqued, the main problems
+          in the original visualization, and how your version improves hierarchy, typography,
+          color use, and storytelling for the intended audience.
+        </p>
+        <div class="project-tags">
+          <span>Redesign</span>
+          <span>Visual hierarchy</span>
+          <span>Typography & color</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- <img class="project-thumb" src="img/a2_thumbnail.png" alt="Assignment 2 preview" /> -->
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 3 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 3 – [Project Title]</h4>
+        <div class="project-meta">Infographic / scrollytelling · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 3. Explain the story you wanted to tell, the key insight or
+          argument, and how the layout, sections, and visual elements guide readers through
+          the narrative without overwhelming them.
+        </p>
+        <div class="project-tags">
+          <span>Infographic</span>
+          <span>Story structure</span>
+          <span>Visual narrative</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- <img class="project-thumb" src="img/a3_thumbnail.png" alt="Assignment 3 preview" /> -->
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 4 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 4 – [Project Title]</h4>
+        <div class="project-meta">Final visualization / case study</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 4. Position this as a mini case study: what was the problem,
+          what data and tools did you use, and what does the final visualization enable for
+          decision-makers? Highlight any collaboration or iteration based on feedback.
+        </p>
+        <div class="project-tags">
+          <span>Case study</span>
+          <span>Feedback & iteration</span>
+          <span>Decision support</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- <img class="project-thumb" src="img/a4_thumbnail.png" alt="Assignment 4 preview" /> -->
+      </div>
+    </article>
+
+    <!-- TUTORIAL PROJECTS -->
+    <div class="section-label" style="margin-top: 2rem;">Tutorial-based work</div>
+    <h3 class="section-title">Selected in-class tutorials</h3>
+
+    <!-- TUTORIAL 1 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">In-class tutorial</div>
+        <h4 class="project-title">Tutorial Project 1 – [Tool / Technique]</h4>
+        <div class="project-meta">Modified output from class tutorial</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Briefly describe which tutorial this is based on (e.g., Flourish, Tableau, StoryMap,
+          etc.), what you changed compared to the in-class example, and why those changes
+          make the visualization more effective for a real audience.
+        </p>
+        <div class="project-tags">
+          <span>Class tutorial</span>
+          <span>Tool practice</span>
+          <span>Refinement</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- <img class="project-thumb" src="img/tutorial1_thumbnail.png" alt="Tutorial project 1 preview" /> -->
+      </div>
+    </article>
+
+    <!-- TUTORIAL 2 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">In-class tutorial</div>
+        <h4 class="project-title">Tutorial Project 2 – [Tool / Technique]</h4>
+        <div class="project-meta">Modified output from class tutorial</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Same idea here: summarize the context of the tutorial, what specific skills it
+          demonstrates (e.g., interactivity, mapping, animation), and how you extended
+          or cleaned up the original class example.
+        </p>
+        <div class="project-tags">
+          <span>Interaction</span>
+          <span>Visual polishing</span>
+          <span>Practice piece</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+        <!-- <img class="project-thumb" src="img/tutorial2_thumbnail.png" alt="Tutorial project 2 preview" /> -->
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> Emmanuel Rueda · Business Intelligence & Data Analytics ·
+    <a href="https://github.com/EmmanuelRE8" target="_blank" rel="noopener">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/your-link-here/" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+  <p>
+    This portfolio was originally developed as part of the “Data Visualization & Storytelling”
+    course at Ontario Tech University and is maintained as a living showcase of my work in data
+    visualization.
+  </p>
+
+  <script>
+    // Keep the year up to date
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>

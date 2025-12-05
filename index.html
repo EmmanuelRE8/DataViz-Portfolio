@@ -212,6 +212,96 @@
       max-width: 70ch;
       line-height: 1.5;
     }
+    /* ===== PROFILE CARD ===== */
+
+.profile-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-bottom: 2.5rem;
+}
+
+.profile-name {
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+}
+
+.profile-title {
+  font-size: 1.1rem;
+  margin: 0.4rem 0 0.2rem;
+  color: #005F73;
+  font-weight: 600;
+}
+
+.profile-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.profile-links {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.icon-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #005F73;
+  color: #005F73;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.icon-btn:hover {
+  background: #0A9396;
+  color: #FFF;
+}
+
+.section-subtitle {
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #005F73;
+  font-weight: 600;
+}
+
+.profile-about {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 70ch;
+}
+
+/* ===== SKILL CHIPS ===== */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+}
+
+.skill-chip {
+  background: #FAFAFA;
+  border: 1px solid #D0D5D9;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Divider */
+.divider {
+  margin-top: 2.5rem;
+  border: none;
+  border-top: 1px solid #DDD;
+}
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 640px) {
@@ -230,16 +320,49 @@
 <body>
 
 <header>
-  <h2>Data Visualization Portfolio</h2>
-  <h1>Emmanuel Rueda Escalona</h1>
-  <p>
-    Business Intelligence & Data Analytics leader and MBAI student at Ontario Tech University.
-    This page showcases selected work from the “Data Visualization & Storytelling” course,
-    curated as a professional portfolio for future employers and collaborators.
-  </p>
-  <p class="tagline">
-    4 course assignments + 2 tutorial-based projects · Focus on clarity, narrative, and visual craft.
-  </p>
+
+  <div class="profile-card">
+
+    <h1 class="profile-name">Emmanuel Rueda</h1>
+
+    <h2 class="profile-title">Data Analyst & BI Specialist · MBAI Candidate</h2>
+
+    <p class="profile-location">Based in Toronto / Oshawa, Canada</p>
+
+    <div class="profile-links">
+      <a href="https://www.linkedin.com/in/your-link-here" target="_blank" class="icon-btn">LinkedIn</a>
+      <a href="mailto:your.email@domain.com" class="icon-btn">Email</a>
+    </div>
+
+    <h3 class="section-subtitle">About Me</h3>
+    <p class="profile-about">
+      I’m a data-driven problem solver with experience in Business Intelligence, data engineering workflows,
+      analytics storytelling, and cloud-based data systems. I’m currently completing a Master’s in Business 
+      Analytics & AI at Ontario Tech University, after several years leading BI and Database teams at Ticketmaster Mexico.
+      My work focuses on transforming complex datasets into strategic insights, designing clear visual narratives,
+      and developing scalable data pipelines for decision-making.
+    </p>
+
+    <h3 class="section-subtitle">Skills</h3>
+    <div class="skills-container">
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">SQL</span>
+      <span class="skill-chip">BigQuery</span>
+      <span class="skill-chip">Databricks</span>
+      <span class="skill-chip">Tableau</span>
+      <span class="skill-chip">Looker Studio</span>
+      <span class="skill-chip">Machine Learning</span>
+      <span class="skill-chip">ETL Pipelines</span>
+      <span class="skill-chip">Analytics Storytelling</span>
+      <span class="skill-chip">Statistical Modeling</span>
+      <span class="skill-chip">APIs</span>
+      <span class="skill-chip">Project Leadership</span>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
 </header>
 
 <main>

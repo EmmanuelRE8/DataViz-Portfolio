@@ -1,305 +1,555 @@
-<style>
-  /* ===== PALETTE =====
-     Night:      #061417
-     Teal dark:  #012C3C
-     Blue mid:   #285669
-     Taupe:      #928477
-     Light warm: #C6BFBB
-  ====================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emmanuel Rueda Escalona – Data Visualization Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ===== PALETTE =====
+       Night:      #061417
+       Teal dark:  #012C3C
+       Blue mid:   #285669
+       Taupe:      #928477
+       Light warm: #C6BFBB
+    ====================== */
 
-  * {
-    box-sizing: border-box;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  /* ===== GLOBAL BACKGROUND ===== */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    /* ===== GLOBAL BACKGROUND ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-    /* Background image */
-    background-image: url("img/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+      /* Background image */
+      background-image: url("img/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
 
-    /* Dark blue overlay for legibility */
-    background-color: rgba(6, 20, 23, 0.82); /* #061417 with opacity */
-    background-blend-mode: multiply;
+      /* Dark blue overlay for legibility */
+      background-color: rgba(6, 20, 23, 0.82); /* #061417 with opacity */
+      background-blend-mode: multiply;
 
-    color: #E5E7EB; /* default text if something queda fuera de las cards */
-  }
+      color: #E5E7EB;
+    }
 
-  a {
-    color: inherit;
-  }
+    a {
+      color: inherit;
+    }
 
-  header,
-  main,
-  footer {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
+    header,
+    main,
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-  /* ===== HEADER LAYOUT ===== */
-  header {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
-  /* ===== PROFILE CARD ===== */
-  .profile-card {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    border-radius: 16px;
-    padding: 2rem 1.8rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(198, 191, 187, 0.7);
-    color: #061417;
-  }
-
-  .profile-name {
-    font-size: 2rem;
-    margin: 0;
-    color: #061417;
-  }
-
-  .profile-title {
-    font-size: 1.1rem;
-    margin: 0.4rem 0 0.2rem;
-    color: #285669;
-    font-weight: 600;
-  }
-
-  .profile-location {
-    font-size: 0.9rem;
-    color: #928477;
-    margin-bottom: 1rem;
-  }
-
-  .profile-links {
-    display: flex;
-    gap: 0.7rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .icon-btn {
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid #012C3C;
-    color: #012C3C;
-    text-decoration: none;
-    font-size: 0.85rem;
-    background: transparent;
-    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease,
-      box-shadow 0.15s ease, border-color 0.15s ease;
-  }
-
-  .icon-btn:hover {
-    background: #285669;
-    color: #ffffff;
-    border-color: #285669;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  }
-
-  .section-subtitle {
-    margin-top: 1.4rem;
-    margin-bottom: 0.4rem;
-    font-size: 1rem;
-    color: #285669;
-    font-weight: 600;
-  }
-
-  .profile-about {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #222222;
-    max-width: 70ch;
-  }
-
-  /* ===== SKILL CHIPS ===== */
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-top: 0.4rem;
-  }
-
-  .skill-chip {
-    background: #c6bfbb;
-    border: 1px solid #928477;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    color: #061417;
-  }
-
-  /* Divider */
-  .divider {
-    margin-top: 2.5rem;
-    border: none;
-    border-top: 1px solid rgba(198, 191, 187, 0.8);
-  }
-
-  /* ===== SECTION TITLES ===== */
-  .section-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #c6bfbb;
-    margin-bottom: 0.6rem;
-  }
-
-  .section-title {
-    font-size: 1.4rem;
-    margin: 0 0 1.5rem;
-    color: #f9fafb;
-  }
-
-  /* ===== PROJECT LIST ===== */
-  .projects {
-    padding-bottom: 3rem;
-  }
-
-  .project {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    border-radius: 14px;
-    padding: 1.6rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(198, 191, 187, 0.7);
-    color: #061417;
-  }
-
-  .project-header {
-    margin-bottom: 0.8rem;
-  }
-
-  .project-course {
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #928477;
-    margin-bottom: 0.25rem;
-  }
-
-  .project-title {
-    font-size: 1.28rem;
-    margin: 0;
-    color: #061417;
-  }
-
-  .project-meta {
-    font-size: 0.86rem;
-    color: #555555;
-    margin-top: 0.2rem;
-  }
-
-  .project-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    margin-top: 0.8rem;
-  }
-
-  .project-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 70ch;
-    color: #222222;
-  }
-
-  .project-tags {
-    font-size: 0.85rem;
-    color: #555555;
-  }
-
-  .project-tags span {
-    display: inline-block;
-    border-radius: 999px;
-    border: 1px solid #d0d5d9;
-    padding: 0.2rem 0.7rem;
-    margin-right: 0.4rem;
-    margin-bottom: 0.3rem;
-    background: #f5f5f5;
-  }
-
-  .project-actions {
-    margin-top: 0.4rem;
-  }
-
-  .btn-link {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 999px;
-    border: 1px solid #012c3c;
-    text-decoration: none;
-    font-size: 0.85rem;
-    color: #ffffff;
-    background: #012c3c;
-    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease,
-      box-shadow 0.15s ease, border-color 0.15s ease;
-  }
-
-  .btn-link:hover {
-    background: #285669;
-    border-color: #285669;
-    color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  }
-
-  .project-thumb {
-    margin-top: 0.8rem;
-    max-width: 100%;
-    border-radius: 10px;
-    display: block;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    padding-bottom: 3rem;
-    padding-top: 1.5rem;
-    font-size: 0.9rem;
-    color: #e5e7eb;
-  }
-
-  footer a {
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    color: #c6bfbb;
-  }
-
-  footer a:hover {
-    border-bottom-color: #c6bfbb;
-  }
-
-  footer p {
-    margin: 0.3rem 0;
-    max-width: 70ch;
-    line-height: 1.5;
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 640px) {
+    /* ===== HEADER LAYOUT ===== */
     header {
-      padding-top: 2rem;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
     }
+
+    /* ===== PROFILE CARD ===== */
     .profile-card {
-      padding: 1.6rem 1.4rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 2rem 1.8rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(198, 191, 187, 0.7);
+      color: #061417;
     }
-    .project {
-      padding: 1.3rem 1.2rem 1.4rem;
-    }
+
     .profile-name {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin: 0;
+      color: #061417;
     }
-  }
-</style>
+
+    .profile-title {
+      font-size: 1.1rem;
+      margin: 0.4rem 0 0.2rem;
+      color: #285669;
+      font-weight: 600;
+    }
+
+    .profile-location {
+      font-size: 0.9rem;
+      color: #928477;
+      margin-bottom: 1rem;
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 0.7rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .icon-btn {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #012C3C;
+      color: #012C3C;
+      text-decoration: none;
+      font-size: 0.85rem;
+      background: transparent;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.1s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    .icon-btn:hover {
+      background: #285669;
+      color: #ffffff;
+      border-color: #285669;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .section-subtitle {
+      margin-top: 1.4rem;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      color: #285669;
+      font-weight: 600;
+    }
+
+    .profile-about {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #222222;
+      max-width: 70ch;
+    }
+
+    /* ===== SKILL CHIPS ===== */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.4rem;
+    }
+
+    .skill-chip {
+      background: #C6BFBB;
+      border: 1px solid #928477;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #061417;
+    }
+
+    /* Divider */
+    .divider {
+      margin-top: 2.5rem;
+      border: none;
+      border-top: 1px solid rgba(198, 191, 187, 0.8);
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C6BFBB;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin: 0 0 1.5rem;
+      color: #F9FAFB;
+    }
+
+    /* ===== PROJECT LIST ===== */
+    .projects {
+      padding-bottom: 3rem;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 14px;
+      padding: 1.6rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(198, 191, 187, 0.7);
+      color: #061417;
+    }
+
+    .project-header {
+      margin-bottom: 0.8rem;
+    }
+
+    .project-course {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #928477;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-title {
+      font-size: 1.28rem;
+      margin: 0;
+      color: #061417;
+    }
+
+    .project-meta {
+      font-size: 0.86rem;
+      color: #555555;
+      margin-top: 0.2rem;
+    }
+
+    .project-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-top: 0.8rem;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 70ch;
+      color: #222222;
+    }
+
+    .project-tags {
+      font-size: 0.85rem;
+      color: #555555;
+    }
+
+    .project-tags span {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid #D0D5D9;
+      padding: 0.2rem 0.7rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      background: #F5F5F5;
+    }
+
+    .project-actions {
+      margin-top: 0.4rem;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #012C3C;
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #FFFFFF;
+      background: #012C3C;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.1s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    .btn-link:hover {
+      background: #285669;
+      border-color: #285669;
+      color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .project-thumb {
+      margin-top: 0.8rem;
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding-bottom: 3rem;
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #E5E7EB;
+    }
+
+    footer a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      color: #C6BFBB;
+    }
+
+    footer a:hover {
+      border-bottom-color: #C6BFBB;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+      max-width: 70ch;
+      line-height: 1.5;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      header {
+        padding-top: 2rem;
+      }
+      .profile-card {
+        padding: 1.6rem 1.4rem;
+      }
+      .project {
+        padding: 1.3rem 1.2rem 1.4rem;
+      }
+      .profile-name {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="profile-card">
+    <h1 class="profile-name">Emmanuel Rueda Escalona</h1>
+    <h2 class="profile-title">Data Visualization & BI Specialist</h2>
+    <p class="profile-location">Based in Toronto / Oshawa, Canada</p>
+
+    <div class="profile-links">
+      <a href="https://www.linkedin.com/in/your-link-here" target="_blank" class="icon-btn">LinkedIn</a>
+      <a href="mailto:your.email@domain.com" class="icon-btn">Email</a>
+    </div>
+
+    <h3 class="section-subtitle">About Me</h3>
+    <p class="profile-about">
+      I’m a data storyteller who enjoys bringing clarity to complex systems.
+      My background in Business Intelligence and analytics strategy allows me to translate messy, multi-source datasets
+      into visual stories that people can understand, trust, and act on.
+      <br><br>
+      Currently completing my MBAI at Ontario Tech University, I’m exploring the intersection between analytical rigour
+      and visual craft, designing dashboards, narratives, and data experiences that communicate insight, not just
+      information.
+      <br><br>
+      I believe that good visualization is not decoration; it’s structure, intention, and empathy. My work focuses on
+      finding the signal, shaping it into a story, and presenting it in a way that respects both the data and the
+      audience.
+    </p>
+
+    <h3 class="section-subtitle">Skills</h3>
+    <div class="skills-container">
+      <span class="skill-chip">Flourish</span>
+      <span class="skill-chip">Canva</span>
+      <span class="skill-chip">StoryMapJS</span>
+      <span class="skill-chip">MapWarper</span>
+      <span class="skill-chip">Tableau</span>
+      <span class="skill-chip">Looker Studio</span>
+
+      <span class="skill-chip">HTML</span>
+      <span class="skill-chip">CSS</span>
+      <span class="skill-chip">JavaScript</span>
+      <span class="skill-chip">D3.js</span>
+      <span class="skill-chip">WordPress</span>
+
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">Pandas</span>
+      <span class="skill-chip">NumPy</span>
+      <span class="skill-chip">Matplotlib</span>
+      <span class="skill-chip">Seaborn</span>
+      <span class="skill-chip">Plotly</span>
+      <span class="skill-chip">Bokeh</span>
+
+      <span class="skill-chip">Data Visualization</span>
+      <span class="skill-chip">Data Storytelling</span>
+      <span class="skill-chip">Analytics Workflow</span>
+    </div>
+  </div>
+
+  <hr class="divider">
+</header>
+
+<main>
+  <section class="projects">
+    <div class="section-label">Professional Showcase</div>
+    <h3 class="section-title">Selected Data Visualization Projects</h3>
+
+    <!-- ASSIGNMENT 1 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 1 – [Project Title]</h4>
+        <div class="project-meta">Exploratory data visualization · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          High-level summary of Assignment 1. This paragraph should briefly explain the dataset,
+          the main questions you explored, and how the visuals support a clear analytical story.
+          Keep it to 3–5 lines, focusing on what a hiring manager would care about.
+        </p>
+        <div class="project-tags">
+          <span>Exploratory analysis</span>
+          <span>Data cleaning</span>
+          <span>Chart design</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 2 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 2 – [Project Title]</h4>
+        <div class="project-meta">Redesign / critique · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 2. Describe what you redesigned or critiqued, the main problems
+          in the original visualization, and how your version improves hierarchy, typography,
+          color use, and storytelling for the intended audience.
+        </p>
+        <div class="project-tags">
+          <span>Redesign</span>
+          <span>Visual hierarchy</span>
+          <span>Typography & color</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 3 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 3 – [Project Title]</h4>
+        <div class="project-meta">Infographic / scrollytelling · Individual project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 3. Explain the story you wanted to tell, the key insight or
+          argument, and how the layout, sections, and visual elements guide readers through
+          the narrative without overwhelming them.
+        </p>
+        <div class="project-tags">
+          <span>Infographic</span>
+          <span>Story structure</span>
+          <span>Visual narrative</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ASSIGNMENT 4 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">Ontario Tech University · Data Visualization & Storytelling</div>
+        <h4 class="project-title">Assignment 4 – [Project Title]</h4>
+        <div class="project-meta">Final visualization / case study</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Summary of Assignment 4. Position this as a mini case study: what was the problem,
+          what data and tools did you use, and what does the final visualization enable for
+          decision-makers? Highlight any collaboration or iteration based on feedback.
+        </p>
+        <div class="project-tags">
+          <span>Case study</span>
+          <span>Feedback & iteration</span>
+          <span>Decision support</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- TUTORIAL PROJECTS -->
+    <div class="section-label" style="margin-top: 2rem;">Tutorial-based work</div>
+    <h3 class="section-title">Selected in-class tutorials</h3>
+
+    <!-- TUTORIAL 1 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">In-class tutorial</div>
+        <h4 class="project-title">Tutorial Project 1 – [Tool / Technique]</h4>
+        <div class="project-meta">Modified output from class tutorial</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Briefly describe which tutorial this is based on (e.g., Flourish, Tableau, StoryMap,
+          etc.), what you changed compared to the in-class example, and why those changes
+          make the visualization more effective for a real audience.
+        </p>
+        <div class="project-tags">
+          <span>Class tutorial</span>
+          <span>Tool practice</span>
+          <span>Refinement</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- TUTORIAL 2 -->
+    <article class="project">
+      <div class="project-header">
+        <div class="project-course">In-class tutorial</div>
+        <h4 class="project-title">Tutorial Project 2 – [Tool / Technique]</h4>
+        <div class="project-meta">Modified output from class tutorial</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Same idea here: summarize the context of the tutorial, what specific skills it
+          demonstrates (e.g., interactivity, mapping, animation), and how you extended
+          or cleaned up the original class example.
+        </p>
+        <div class="project-tags">
+          <span>Interaction</span>
+          <span>Visual polishing</span>
+          <span>Practice piece</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn-link" href="#" target="_blank" rel="noopener">View project</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> Emmanuel Rueda · Business Intelligence & Data Analytics ·
+    <a href="https://github.com/EmmanuelRE8" target="_blank" rel="noopener">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/your-link-here/" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+  <p>
+    This portfolio was originally developed as part of the “Data Visualization & Storytelling”
+    course at Ontario Tech University and is maintained as a living showcase of my work in data
+    visualization.
+  </p>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>

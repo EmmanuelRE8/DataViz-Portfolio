@@ -209,6 +209,25 @@
     footer a:hover {
       border-bottom-color: #C6BFBB;
     }
+    /* ===== Larger StoryMap embed ===== */
+.storymap-frame-large {
+  width: 100%;
+  height: 75vh; /* MUCH TALLER */
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Make left column wider */
+.case-visual {
+  flex: 0 0 50%; /* was 42% */
+}
+
+/* Make right column narrower */
+.case-content {
+  flex: 0 0 48%;
+}
+
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 880px) {
@@ -246,29 +265,36 @@
 
   <main class="case-layout">
 
-    <!-- LEFT: STICKY STORYMAP -->
-    <aside class="case-visual">
-      <div class="case-visual-inner">
-        <iframe
-          class="storymap-frame"
-          src="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
-          title="StoryMapJS – Minard Campaign Redesign"
-          loading="lazy"
-        ></iframe>
-        <p class="visual-caption">
-          Interactive StoryMapJS redesign of Minard’s Napoleon campaign. Scroll on the right to read about the process;
-          explore the map on the left or open it in a separate tab for full-screen viewing.
-        </p>
-        <a
-          class="btn-secondary"
-          href="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
-          target="_blank"
-          rel="noopener"
-        >
-          Open interactive in a new tab
-        </a>
-      </div>
-    </aside>
+<!-- LEFT: STICKY STORYMAP -->
+<aside class="case-visual">
+  <div class="case-visual-inner">
+
+    <!-- 🔵 Move button ABOVE the embed -->
+    <a
+      class="btn-secondary"
+      href="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
+      target="_blank"
+      rel="noopener"
+      style="margin-bottom: 1rem; display: inline-block; font-size: 0.9rem; padding: 0.5rem 1.2rem;"
+    >
+      Open interactive in a new tab
+    </a>
+
+    <!-- 🔵 MUCH BIGGER EMBED -->
+    <iframe
+      class="storymap-frame-large"
+      src="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
+      title="StoryMapJS – Minard Campaign Redesign"
+      loading="lazy"
+    ></iframe>
+
+    <p class="visual-caption">
+      This embedded StoryMapJS stays fixed on the left while the narrative scrolls on the right.  
+      Use the fullscreen button above for the full immersive experience.
+    </p>
+
+  </div>
+</aside>
 
     <!-- RIGHT: SCROLLING CONTENT -->
     <section class="case-content">

@@ -98,14 +98,6 @@
       color: #061417;
     }
 
-    .storymap-frame {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      border: 0;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
     .visual-caption {
       margin-top: 0.7rem;
       font-size: 0.8rem;
@@ -209,24 +201,26 @@
     footer a:hover {
       border-bottom-color: #C6BFBB;
     }
-    /* ===== Larger StoryMap embed ===== */
-.storymap-frame-large {
+/* ===== Bigger StoryMap embed (no aspect-ratio) ===== */
+.storymap-frame {
   width: 100%;
-  height: 75vh; /* MUCH TALLER */
+  height: 80vh;         /* bien alto: 80% de la altura de la ventana */
+  min-height: 600px;    /* por si la pantalla es chica */
   border: 0;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
 }
 
-/* Make left column wider */
 .case-visual {
-  flex: 0 0 50%; /* was 42% */
+  flex: 0 0 60%;   /* antes 42% */
+  position: sticky;
+  top: 1.5rem;
 }
 
-/* Make right column narrower */
 .case-content {
-  flex: 0 0 48%;
+  flex: 0 0 38%;   /* en vez de flex: 1; */
 }
+
 
 
     /* ===== RESPONSIVE ===== */
@@ -281,12 +275,13 @@
     </a>
 
     <!-- 🔵 MUCH BIGGER EMBED -->
-    <iframe
-      class="storymap-frame-large"
-      src="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
-      title="StoryMapJS – Minard Campaign Redesign"
-      loading="lazy"
-    ></iframe>
+<iframe
+  class="storymap-frame"
+  src="https://uploads.knightlab.com/storymapjs/696f719d669a4b6c951840e74948eaa8/a2-minard-emmanuelrueda/index.html"
+  title="StoryMapJS – Minard Campaign Redesign"
+  loading="lazy"
+></iframe>
+
 
     <p class="visual-caption">
       This embedded StoryMapJS stays fixed on the left while the narrative scrolls on the right.  

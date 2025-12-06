@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Persona Design Tutorial – Emmanuel Rueda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+
+/* ===== Base layout + shared palette ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgba(6, 20, 23, 0.82);
+  background-blend-mode: multiply;
+
+  color: #E5E7EB;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.back-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #C6BFBB;
+  border-bottom: 1px solid transparent;
+}
+
+.back-link:hover {
+  border-bottom-color: #C6BFBB;
+}
+
+.case-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #928477;
+}
+
+.case-title {
+  font-size: 1.9rem;
+  margin: 0.7rem 0 0.3rem;
+  color: #FFFFFF;
+}
+
+.case-subtitle {
+  font-size: 0.95rem;
+  color: #C6BFBB;
+  margin-bottom: 1.4rem;
+}
+
+/* ===== Layout: Left sticky preview + Right text ===== */
+
+.case-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.case-visual {
+  flex: 0 0 55%;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.case-visual-inner {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(198, 191, 187, 0.8);
+  color: #061417;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-scroller {
+  overflow-y: auto;
+  flex: 1;
+  border-radius: 14px;
+}
+
+.infographic-frame {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ===== Text blocks ===== */
+
+.case-content {
+  flex: 0 0 40%;
+}
+
+.case-section {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(198, 191, 187, 0.7);
+  color: #061417;
+}
+
+.case-section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+  color: #285669;
+}
+
+.case-section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0.4rem 0;
+}
+
+.case-section ul {
+  margin-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #C6BFBB;
+}
+
+footer a {
+  color: #C6BFBB;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+footer a:hover {
+  border-bottom-color: #C6BFBB;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .case-layout { flex-direction: column; }
+  .case-visual { position: static; }
+  .case-visual-inner { max-height: none; }
+  .case-content { flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-shell">
+
+<header>
+  <a href="../index.html" class="back-link">← Back to portfolio</a>
+  <p class="case-meta">In-class Tutorial · Persona Definition</p>
+  <h1 class="case-title">Character Persona – Motivations, Needs & Narrative Role</h1>
+  <p class="case-subtitle">
+    A creative storytelling exercise focused on defining a character persona to anchor the broader narrative.
+    In this tutorial, the goal was to transform an abstract theme—in our case, AI and labour disruption—into a 
+    more relatable and emotionally engaging story by defining “Robo” as a persona.
+  </p>
+</header>
+
+<main class="case-layout">
+
+  <!-- LEFT PANEL: Sticky preview -->
+  <aside class="case-visual">
+    <div class="case-visual-inner">
+      <div class="visual-scroller">
+        <img src="../img/tutorial_persona.png" alt="Persona design board" class="infographic-frame" />
+      </div>
+      <p class="visual-caption">Persona-definition board created during the tutorial.</p>
+    </div>
+  </aside>
+
+  <!-- RIGHT PANEL: Text content -->
+  <section class="case-content">
+
+    <!-- Section 1 -->
+    <article class="case-section">
+      <h2>Purpose of the Exercise</h2>
+      <p>
+        The tutorial introduced the concept of <strong>persona-driven storytelling</strong>—a method commonly used in
+        UX design but extremely powerful in data storytelling. Instead of starting with charts or datasets, we began with
+        a character whose motivations, fears, needs, and limitations define how the narrative should unfold.
+      </p>
+      <p>
+        This approach helps ensure that the story feels human, grounded, and emotionally resonant, even when the subject
+        matter (AI, automation, labour data) is highly technical.
+      </p>
+    </article>
+
+    <!-- Section 2 -->
+    <article class="case-section">
+      <h2>Defining Robo: Who Is He?</h2>
+      <p>
+        In our story, Robo represents artificial intelligence itself—an entity that grows by “consuming” tasks, jobs,
+        and data. Creating a persona for Robo allowed us to translate abstract AI concepts into behaviour, personality,
+        and stakes that readers could understand.
+      </p>
+      <ul>
+        <li><strong>Role in story:</strong> antagonist and symbolic force of automation</li>
+        <li><strong>Motivations:</strong> hunger for data, expansion, adaptation</li>
+        <li><strong>Needs:</strong> more tasks to learn from, more computational “fuel”</li>
+        <li><strong>Fears:</strong> stagnation, insufficient data, human resistance</li>
+      </ul>
+    </article>
+
+    <!-- Section 3 -->
+    <article class="case-section">
+      <h2>Why Personas Matter in Data Storytelling</h2>
+      <p>
+        Defining a persona helps anchor the narrative for three reasons:
+      </p>
+      <ul>
+        <li>
+          <strong>Clarity:</strong> Readers understand what the story is “about” without needing technical definitions upfront.
+        </li>
+        <li>
+          <strong>Emotional impact:</strong> A character—even a robot—creates empathy, curiosity, or tension.
+        </li>
+        <li>
+          <strong>Structural guidance:</strong> The persona's needs and behaviours shape the sequence of events and visuals.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 4 -->
+    <article class="case-section">
+      <h2>What I Learned</h2>
+      <p>
+        This exercise showed how valuable persona work is when designing visual narratives. It allowed us to:
+      </p>
+      <ul>
+        <li>turn an abstract policy topic into a character-driven narrative,</li>
+        <li>identify motivations and conflicts that would guide the story arc,</li>
+        <li>shape tone, visual style, and pacing around the persona’s “voice”,</li>
+        <li>avoid flat or overly technical explanations early in the story.</li>
+      </ul>
+      <p>
+        The persona created here directly informed the tone and structure of our final project, RoboStory.
+      </p>
+    </article>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> Emmanuel Rueda · 
+    <a href="https://github.com/EmmanuelRE8" target="_blank">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/emmanuelre/" target="_blank">LinkedIn</a>
+  </p>
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

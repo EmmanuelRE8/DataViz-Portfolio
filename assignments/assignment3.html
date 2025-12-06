@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Boom of Live Music – Infographic · Emmanuel Rueda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ===== PALETTE (same as main site) ===== */
+    /* Night: #061417 | Teal dark: #012C3C | Blue mid: #285669
+       Taupe: #928477 | Light warm: #C6BFBB */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      background-image: url("../img/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+      background-color: rgba(6, 20, 23, 0.82);
+      background-blend-mode: multiply;
+
+      color: #E5E7EB;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #C6BFBB;
+      border-bottom: 1px solid transparent;
+    }
+
+    .back-link:hover {
+      border-bottom-color: #C6BFBB;
+    }
+
+    .case-title {
+      font-size: 1.9rem;
+      margin: 0.8rem 0 0.3rem;
+      color: #F9FAFB;
+    }
+
+    .case-subtitle {
+      font-size: 0.95rem;
+      color: #C6BFBB;
+      margin: 0 0 0.8rem;
+    }
+
+    .case-meta {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #928477;
+    }
+
+    /* ===== LAYOUT: STICKY VISUAL + SCROLL TEXT ===== */
+
+    .case-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .case-visual {
+      flex: 0 0 55%;
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .case-visual-inner {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(198, 191, 187, 0.8);
+      color: #061417;
+      max-height: 90vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .infographic-frame {
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .visual-scroller {
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .visual-caption {
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      color: #4B5563;
+    }
+
+    .case-content {
+      flex: 0 0 40%;
+    }
+
+    .case-section {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      border-radius: 14px;
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(198, 191, 187, 0.7);
+      color: #061417;
+    }
+
+    .case-section h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.4rem;
+      color: #285669;
+    }
+
+    .case-section p {
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #222222;
+    }
+
+    .case-section ul {
+      margin: 0.4rem 0 0.4rem 1.2rem;
+      padding: 0;
+      font-size: 0.95rem;
+      color: #222222;
+    }
+
+    .case-section li {
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #C6BFBB;
+      text-align: left;
+    }
+
+    footer a {
+      color: #C6BFBB;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    footer a:hover {
+      border-bottom-color: #C6BFBB;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .case-layout {
+        flex-direction: column;
+      }
+      .case-visual {
+        position: static;
+        top: auto;
+      }
+      .case-visual-inner {
+        max-height: none;
+      }
+      .case-content {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-shell {
+        padding: 1.8rem 1.1rem 2.5rem;
+      }
+      .case-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-shell">
+  <header>
+    <a href="../index.html" class="back-link">← Back to portfolio</a>
+    <p class="case-meta">Ontario Tech University · Data Visualization & Storytelling · Individual Project</p>
+    <h1 class="case-title">The Boom of Live Music – Explanatory Infographic</h1>
+    <p class="case-subtitle">
+      A long-form infographic that combines multiple datasets and four explanatory theories to tell a cohesive story
+      about why live music is booming in the era of streaming.
+    </p>
+  </header>
+
+  <main class="case-layout">
+
+    <!-- LEFT: STICKY INFOGRAPHIC -->
+    <aside class="case-visual">
+      <div class="case-visual-inner">
+        <div class="visual-scroller">
+          <img
+            src="../img/a3_live_music_infographic.png"
+            alt="The Boom of Live Music – full infographic"
+            class="infographic-frame"
+          />
+        </div>
+        <p class="visual-caption">
+          Full infographic preview. The graphic scrolls inside this panel while the written case study unfolds on the right.
+        </p>
+      </div>
+    </aside>
+
+    <!-- RIGHT: SCROLLING CONTENT -->
+    <section class="case-content">
+
+      <!-- Overview -->
+      <article class="case-section">
+        <h2>Overview</h2>
+        <p>
+          This project investigates why live music is booming at a time when streaming dominates how people listen to
+          music. Rather than focusing on a single cause, the infographic weaves together several datasets and four
+          complementary theories, moving from global revenue trends to format shifts, post-pandemic dynamics,
+          generational change, and the role of social media in amplifying demand for concerts and tours.
+        </p>
+        <p>
+          The result is a long-form, poster-style piece designed to be read top-to-bottom, using hierarchy, color,
+          and visual rhythm to guide the reader through the argument.
+        </p>
+      </article>
+
+      <!-- Narrative Structure -->
+      <article class="case-section">
+        <h2>Narrative Structure</h2>
+        <p>
+          The infographic is structured in three main layers:
+        </p>
+        <ul>
+          <li>
+            <strong>Headline &amp; context.</strong> The title and subtitle frame the core question:
+            why is live music booming in the era of cloud and streaming?
+          </li>
+          <li>
+            <strong>Big-picture trend.</strong> The first chart shows global live vs recorded music revenues over time,
+            establishing that live music has grown steadily and becomes the foundation for the rest of the story.
+          </li>
+          <li>
+            <strong>Four explanatory theories.</strong> The bottom section presents four panels, each representing
+            a different theory supported by its own chart and visual treatment.
+          </li>
+        </ul>
+        <p>
+          This structure lets readers first understand the overall pattern, and then explore more nuanced explanations
+          without getting lost.
+        </p>
+      </article>
+
+      <!-- The Four Theories -->
+      <article class="case-section">
+        <h2>The Four Theories</h2>
+        <p>
+          Each of the four numbered panels highlights one explanation for the live-music boom:
+        </p>
+        <ul>
+          <li>
+            <strong>The Format Shift.</strong> Streaming reduced artists’ income from recordings and pushed them toward
+            live performances as their primary revenue source.
+          </li>
+          <li>
+            <strong>The Post-Pandemic Effect.</strong> COVID-19 created a sharp drop followed by an exceptionally strong
+            rebound, as pent-up demand and rescheduled tours flooded the market.
+          </li>
+          <li>
+            <strong>New Generation Mindset.</strong> Younger generations entering the workforce show different spending
+            preferences, placing higher value on experiences over ownership.
+          </li>
+          <li>
+            <strong>Social Media Virality.</strong> Digital culture, fandoms, and social platforms amplify visibility
+            and fear of missing out, driving more people to attend shows.
+          </li>
+        </ul>
+        <p>
+          The closing statement at the bottom of the infographic synthesizes these ideas: regardless of which theory is
+          most important, the conclusion is clear – live music is booming.
+        </p>
+      </article>
+
+      <!-- Visual & Design Choices -->
+      <article class="case-section">
+        <h2>Visual &amp; Design Choices</h2>
+        <p>
+          The visual language is inspired by concert lighting and stage design: deep blues and purples, strong contrast,
+          and neon accents. This creates a clear connection between the data and the atmosphere of live shows.
+        </p>
+        <p>
+          Key design decisions include:
+        </p>
+        <ul>
+          <li>using a consistent grid to align charts, annotations, and numbered theory panels,</li>
+          <li>maintaining a limited color palette to avoid visual noise,</li>
+          <li>using large, legible typography for titles and theory labels, and</li>
+          <li>adding subtle glow effects and icons to reinforce the concert theme without overpowering the data.</li>
+        </ul>
+      </article>
+
+      <!-- Tools Used -->
+      <article class="case-section">
+        <h2>Tools Used</h2>
+        <p>
+          <strong>Flourish / charting tools</strong> – for creating the main time-series and area charts.<br />
+          <strong>Canva</strong> – for layout, typography, color treatment, and final composition of the infographic.<br />
+          <strong>Spreadsheet tools</strong> – for data preparation and basic calculations before visualization.
+        </p>
+      </article>
+
+      <!-- Reflection -->
+      <article class="case-section">
+        <h2>What I Learned</h2>
+        <p>
+          This assignment was a chance to practice long-form explanatory design: balancing multiple charts, narrative
+          text, and a strong visual theme in a single piece. I learned how to:
+        </p>
+        <ul>
+          <li>orchestrate several datasets into one coherent story arc,</li>
+          <li>use hierarchy and spacing to make a dense infographic feel readable,</li>
+          <li>connect visual language (lighting, colors, icons) to the subject matter in a consistent way.</li>
+        </ul>
+        <p>
+          The infographic complements the more playful comic of Assignment 1 and the historical StoryMap in Assignment 2,
+          showing a different side of my approach to data storytelling: highly structured, theme-driven, and focused on
+          synthesis.
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Emmanuel Rueda ·
+      <a href="https://github.com/EmmanuelRE8" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/emmanuelre/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

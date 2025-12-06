@@ -5,7 +5,7 @@
   <title>RoboStory – Final Scrollytelling Project · Emmanuel Rueda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* ===== PALETTE (same as main site) ===== */
+    /* ===== PALETTE (shared with main site) ===== */
     /* Night: #061417 | Teal dark: #012C3C | Blue mid: #285669
        Taupe: #928477 | Light warm: #C6BFBB */
 
@@ -18,6 +18,7 @@
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
+      /* Background image & overlay */
       background-image: url("../img/background.jpg");
       background-size: cover;
       background-position: center;
@@ -137,6 +138,7 @@
       width: 100%;
       display: block;
       border-radius: 14px;
+      margin-bottom: 0.75rem;
     }
 
     .visual-caption {
@@ -233,17 +235,17 @@
 <div class="page-shell">
   <header>
     <a href="../index.html" class="back-link">← Back to portfolio</a>
-    <p class="case-meta">Ontario Tech University · Data Visualization & Storytelling · Final Project</p>
-    <h1 class="case-title">RoboStory – Final Scrollytelling Project</h1>
+    <p class="case-meta">Ontario Tech University · Data Visualization & Storytelling · Final Group Project</p>
+    <h1 class="case-title">The Scary Story of Robo – AI, Work, and Midlife Careers</h1>
     <p class="case-subtitle">
-      An interactive, Canva-based scrollytelling piece published as a one-page website. The project combines narrative,
-      data visuals, and illustration to explore <strong>[short description of the topic]</strong>.
+      A group scrollytelling project that personifies artificial intelligence as “Robo”, a hungry machine that feeds
+      on jobs in Canada — with a particular focus on what this means for midlife workers in Durham Region.
     </p>
   </header>
 
   <main class="case-layout">
 
-    <!-- LEFT: STICKY PREVIEW -->
+    <!-- LEFT: STICKY PREVIEW WITH INTERNAL SCROLL -->
     <aside class="case-visual">
       <div class="case-visual-inner">
 
@@ -257,79 +259,147 @@
           Open interactive website in a new tab
         </a>
 
-        <!-- Scrollable PNG preview -->
+        <!-- Scrollable sequence of static images: 1.png, 2.png, 3.png, ... -->
         <div class="visual-scroller">
-          <img
-            src="../img/a4_robostory_scrolly.png"
-            alt="RoboStory – Canva scrollytelling preview"
-            class="infographic-frame"
-          />
+          <img src="../img/1.png" alt="RoboStory static frame 1" class="infographic-frame" />
+          <img src="../img/2.png" alt="RoboStory static frame 2" class="infographic-frame" />
+          <img src="../img/3.png" alt="RoboStory static frame 3" class="infographic-frame" />
+          <img src="../img/4.png" alt="RoboStory static frame 4" class="infographic-frame" />
+          <img src="../img/5.png" alt="RoboStory static frame 5" class="infographic-frame" />
+          <img src="../img/6.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <img src="../img/7.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <img src="../img/8.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <img src="../img/9.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <img src="../img/10.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <img src="../img/11.png" alt="RoboStory static frame 6" class="infographic-frame" />
+          <!-- If you have more pages, continue:
+          <img src="../img/7.png" alt="RoboStory static frame 7" class="infographic-frame" />
+          ... -->
         </div>
 
         <p class="visual-caption">
-          Static preview of the Canva scrollytelling piece. The full interactive experience is available via the button above.
+          Static preview of the RoboStory scrollytelling sequence. The full interactive Canva website is available via
+          the button above.
         </p>
       </div>
     </aside>
 
-    <!-- RIGHT: SCROLLING CONTENT -->
+    <!-- RIGHT: SCROLLING CASE STUDY CONTENT -->
     <section class="case-content">
 
       <!-- Overview -->
       <article class="case-section">
         <h2>Overview</h2>
         <p>
-          RoboStory is the final project for the “Data Visualization &amp; Storytelling” course. Instead of a traditional
-          slide deck, the piece was designed as a vertical scrollytelling experience hosted as a Canva website. It
-          combines visuals, text, and data-driven insights to explain <strong>[brief explanation of what RoboStory is about]</strong>.
+          RoboStory is a horror-inspired data narrative about artificial intelligence and work. In this story, Robo is
+          not just a cute robot — he represents AI systems that “eat” tasks and occupations as they become more capable.
+          His appetite grows with the amount of data and automation we feed him.
         </p>
         <p>
-          The goal was to create something that feels closer to an editorial long-read or interactive article than a
-          classroom presentation, while still being lightweight enough to share and load quickly.
+          The project explores how this dynamic affects workers in Canada, especially those in midlife who suddenly find
+          their jobs exposed to automation and face pressure to reskill or change careers. The story connects national
+          statistics with the specific context of Durham Region, where the course is based.
         </p>
       </article>
 
-      <!-- Narrative Structure -->
+      <!-- Who or What is Robo? -->
       <article class="case-section">
-        <h2>Narrative Structure</h2>
+        <h2>Who or What is Robo?</h2>
         <p>
-          The story is organized in clear sections so that readers can follow a logical arc from context to implications:
+          In the narrative, Robo embodies artificial intelligence itself. His constant hunger stands for the growing
+          number of professions that AI can partially or fully replace, particularly higher-skilled jobs that rely on
+          cognitive, analytical, or information-processing tasks. As Robo evolves, he needs more data and more tasks to
+          keep “feeding” and learning.
+        </p>
+        <p>
+          The story emphasizes that midlife workers are in a vulnerable position: they often have specialized
+          experience, mortgages, and family responsibilities, but may not have the time or resources to rapidly retrain
+          when AI reshapes their occupations.
+        </p>
+      </article>
+
+      <!-- Data & Methods -->
+      <article class="case-section">
+        <h2>Data &amp; Analytical Approach</h2>
+        <p>
+          The narrative is grounded in a Statistics Canada study that estimates exposure to artificial intelligence
+          across Canadian occupations. The study shows that highly skilled roles can be both the most at risk of
+          disruption and the most likely to benefit from AI as a complement, rather than a simple replacement. :contentReference[oaicite:1]{index=1}
+        </p>
+        <p>
+          To translate this into Robo’s “preferences”, we used the exposure index to distinguish the jobs that Robo
+          likes the most (high exposure) and the ones he likes the least (low exposure), creating a visual quadrant that
+          helps readers see which professions are more likely to be transformed by AI.
+        </p>
+      </article>
+
+      <!-- From National to Local: Durham Region -->
+      <article class="case-section">
+        <h2>From National Patterns to Durham Region</h2>
+        <p>
+          Rather than talking about AI in abstract national terms only, the project brings the story down to Durham
+          Region. We connected the occupation-level exposure data with local spatial data:
         </p>
         <ul>
-          <li><strong>Opening hook.</strong> A strong visual and headline introduce the main theme and why it matters.</li>
-          <li><strong>Context &amp; background.</strong> Short sections explain the current landscape and the problem being addressed.</li>
-          <li><strong>Data &amp; evidence.</strong> Charts and diagrams highlight key numbers, trends, or comparisons.</li>
-          <li><strong>Implications &amp; future.</strong> The piece ends with takeaways, open questions, or scenarios for what happens next.</li>
+          <li>
+            <strong>Durham Region’s Business Directory (GeoJSON)</strong> – providing the location of registered
+            businesses across the region.
+          </li>
+          <li>
+            <strong>2016 Census Dissemination Areas (GeoJSON)</strong> – offering demographic variables such as
+            working-age population and seniors, along with neighborhood boundaries.
+          </li>
         </ul>
         <p>
-          Each section is designed to be scannable, with clear headings, limited text, and strong visual anchors.
+          Through several map iterations, we moved from simple county outlines to richer layers showing population,
+          business density, and eventually AI exposure. The final maps illustrate where Robo might “start eating first”
+          if he arrives in Durham: areas with many businesses and a concentration of highly exposed occupations.
         </p>
       </article>
 
-      <!-- Visual & Interaction Design -->
+      <!-- Story Structure & Visual Design -->
       <article class="case-section">
-        <h2>Visual &amp; Interaction Design</h2>
+        <h2>Story Structure &amp; Visual Design</h2>
         <p>
-          The visual language of RoboStory builds on the course’s emphasis on clarity and narrative. Key choices include:
+          The story follows a classic three-act structure:
         </p>
         <ul>
-          <li>using a consistent color palette and type hierarchy across the entire scrollytelling piece,</li>
-          <li>balancing illustration and data visuals so that charts support the story rather than interrupt it,</li>
-          <li>keeping animations subtle and purposeful, so they guide attention instead of becoming distractions,</li>
-          <li>designing for both desktop and mobile readers through large, legible text and full-width blocks.</li>
+          <li>
+            <strong>Phase 1 – Introduction.</strong> Robo is introduced as an emerging AI entity. We explain who he is,
+            what he eats (data and tasks), and how his hunger grows as systems become more powerful.
+          </li>
+          <li>
+            <strong>Phase 2 – Conflict.</strong> Once Robo is “fully developed”, he arrives in Durham Region and begins
+            feeding on the jobs that are most exposed to AI, illustrated through maps and occupation categories.
+          </li>
+          <li>
+            <strong>Phase 3 – Conclusion.</strong> The story ends by asking what this means for workers today: who is
+            most at risk, what types of skills are more resilient, and what kinds of support or adaptation strategies
+            are needed for midlife workers.
+          </li>
         </ul>
         <p>
-          Canva’s website export made it possible to prototype quickly while maintaining control over layout and pacing.
+          Visually, we leaned into a horror aesthetic: dark textures, window-like frames with “X” close buttons, and
+          glitchy typography that evokes old computer interfaces. This style reinforces the unsettling feeling of
+          watching Robo grow while keeping the data and maps readable.
         </p>
       </article>
 
-      <!-- Tools Used -->
+      <!-- Collaboration & Tools -->
       <article class="case-section">
-        <h2>Tools Used</h2>
+        <h2>Collaboration &amp; Tools</h2>
         <p>
-          <strong>Canva (Website mode)</strong> – for layout, typography, visual assets, and publishing as a scrolling site.<br />
-          <strong>Spreadsheet / analysis tools</strong> – for any underlying data work feeding into charts or key numbers.<br />
-          <strong>Image editing tools</strong> – where needed to refine illustrations or background elements.
+          RoboStory was developed collaboratively using:
+        </p>
+        <ul>
+          <li><strong>Miro</strong> – for brainstorming themes, characters, datasets, and delivery methods.</li>
+          <li><strong>Canva (Website mode)</strong> – to assemble the visual narrative as a scrolling web experience.</li>
+          <li><strong> GIS/mapping tools</strong> – to create the sequence of map iterations from simple boundaries to AI-exposure maps.</li>
+          <li><strong>Spreadsheet and coding tools</strong> – for basic processing of the Statistics Canada and local datasets.</li>
+        </ul>
+        <p>
+          The project required aligning different skills in the group: data research, mapping, visual design, copywriting,
+          and narrative structure.
         </p>
       </article>
 
@@ -337,18 +407,18 @@
       <article class="case-section">
         <h2>What I Learned</h2>
         <p>
-          This project was an opportunity to apply storytelling techniques from the course in a more flexible, web-like
-          format. I learned how to:
+          This final project brought together many elements from the course: scrollytelling, mapping, visual hierarchy,
+          and collaborative design. Personally, I learned how to:
         </p>
         <ul>
-          <li>translate a slide-based idea into a continuous scrolling narrative,</li>
-          <li>use section breaks and visual rhythm to control pacing,</li>
-          <li>design with both readability and personality in mind, without overwhelming the data.</li>
+          <li>translate a complex policy and labour-market topic into a character-driven narrative,</li>
+          <li>connect national-level datasets with local geospatial data to make the story feel concrete,</li>
+          <li>coordinate a multi-person workflow where different people own different parts of the story.</li>
         </ul>
         <p>
           RoboStory sits alongside the comic (Assignment 1), the historical StoryMap (Assignment 2), and the concert
-          infographic (Assignment 3) as a complementary example of how I approach data storytelling across different
-          formats and tools.
+          infographic (Assignment 3) as a complementary example of how I approach data storytelling: mixing strong visual
+          themes with solid data and clear structure.
         </p>
       </article>
 

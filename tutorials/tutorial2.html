@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Miro Brainstorming Tutorial – Emmanuel Rueda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+
+/* ===== Background and typography ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgba(6, 20, 23, 0.82);
+  background-blend-mode: multiply;
+
+  color: #E5E7EB;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.back-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #C6BFBB;
+  border-bottom: 1px solid transparent;
+}
+
+.back-link:hover {
+  border-bottom-color: #C6BFBB;
+}
+
+.case-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #928477;
+}
+
+.case-title {
+  font-size: 1.9rem;
+  margin: 0.7rem 0 0.3rem;
+  color: #FFFFFF;
+}
+
+.case-subtitle {
+  font-size: 0.95rem;
+  color: #C6BFBB;
+  margin-bottom: 1.4rem;
+}
+
+/* ===== Layout (same structure as A1–A4 & Tutorial 1) ===== */
+
+.case-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.case-visual {
+  flex: 0 0 55%;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.case-visual-inner {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(198, 191, 187, 0.8);
+  color: #061417;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-scroller {
+  overflow-y: auto;
+  flex: 1;
+  border-radius: 14px;
+}
+
+.infographic-frame {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ===== Text panels ===== */
+
+.case-content {
+  flex: 0 0 40%;
+}
+
+.case-section {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(198, 191, 187, 0.7);
+  color: #061417;
+}
+
+.case-section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+  color: #285669;
+}
+
+.case-section p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.case-section ul {
+  margin-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #C6BFBB;
+}
+
+footer a {
+  color: #C6BFBB;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+footer a:hover {
+  border-bottom-color: #C6BFBB;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .case-layout { flex-direction: column; }
+  .case-visual { position: static; }
+  .case-visual-inner { max-height: none; }
+  .case-content { flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-shell">
+
+<header>
+  <a href="../index.html" class="back-link">← Back to portfolio</a>
+  <p class="case-meta">In-class Tutorial · Story Ideation</p>
+  <h1 class="case-title">Brainstorming & Story Foundations (Miro Mapping)</h1>
+  <p class="case-subtitle">
+    A collaborative ideation exercise for defining the core elements of a data story—theme, characters, datasets,
+    visual strategy, and delivery method. This tutorial shaped the foundation for Assignment 1.
+  </p>
+</header>
+
+<main class="case-layout">
+
+  <!-- LEFT PANEL: Sticky Miro image -->
+  <aside class="case-visual">
+    <div class="case-visual-inner">
+      <div class="visual-scroller">
+        <img src="../img/tutorial_miro.png" alt="Miro brainstorming board" class="infographic-frame" />
+      </div>
+      <p class="visual-caption">Brainstorming board created during the Miro tutorial.</p>
+    </div>
+  </aside>
+
+  <!-- RIGHT PANEL: Text -->
+  <section class="case-content">
+
+    <article class="case-section">
+      <h2>Purpose of the Exercise</h2>
+      <p>
+        This tutorial introduced a structured approach to ideation for data storytelling. Before creating any visuals,
+        the goal was to explore possible narratives, characters, emotional anchors, datasets, and delivery formats.
+      </p>
+      <p>
+        Working in Miro allowed the group to generate a wide range of ideas quickly and visually organize them
+        into meaningful clusters.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>Exploring Themes</h2>
+      <p>
+        We began by listing topics that felt personally meaningful or socially relevant. These ranged from sports and
+        entertainment to inflation, healthcare, pets, videogames, workplace dynamics, and more.
+      </p>
+      <p>
+        Through discussion and clustering, we gravitated toward **concerts and entertainment events**, which later
+        became the foundation of Assignment 1.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>Defining Characters</h2>
+      <p>
+        Characters add emotional grounding to data stories. Our brainstorming included:
+      </p>
+      <ul>
+        <li>my dog Penny,</li>
+        <li>a random couple,</li>
+        <li>friends and family,</li>
+        <li>fictional personas (e.g., robots),</li>
+        <li>ourselves.</li>
+      </ul>
+      <p>
+        For Assignment 1, we selected **a couple attending concerts**, which helped structure the comic narrative.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>Identifying Datasets</h2>
+      <p>
+        We collected potential sources for storytelling, such as:
+      </p>
+      <ul>
+        <li>Billboard Boxscore and Pollstar (concert revenues),</li>
+        <li>Google Trends,</li>
+        <li>Statistics Canada,</li>
+        <li>Industry reports (PwC/Deloitte),</li>
+        <li>Social media data,</li>
+        <li>OECD indicators.</li>
+      </ul>
+      <p>
+        This step ensured that our chosen story would be grounded in credible, accessible data.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>Selecting Visual Methods</h2>
+      <p>
+        We evaluated visualization options—line charts, bar charts, Sankey diagrams, waffle charts, bump charts,
+        pie charts, etc.—marking those that best suited our selected topic.
+      </p>
+      <p>
+        The final selection came from aligning visuals with narrative needs rather than aesthetics alone.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>Choosing a Delivery Method</h2>
+      <p>
+        Finally, we explored formats such as dashboards, infographics, videos, card games, interactive maps, and
+        scrollytelling. The group selected **scrollytelling**, which aligned with our creative vision for A1.
+      </p>
+    </article>
+
+    <article class="case-section">
+      <h2>What I Learned</h2>
+      <p>
+        This exercise reinforced the importance of structured ideation before designing visuals. I learned how to:
+      </p>
+      <ul>
+        <li>explore many possible themes before committing to one,</li>
+        <li>use personas and emotional anchoring to guide narrative tone,</li>
+        <li>link datasets to narrative opportunities early in the process,</li>
+        <li>evaluate visual and delivery methods based on story needs.</li>
+      </ul>
+      <p>
+        This tutorial directly supported the development of Assignment 1 and strengthened my process for conceptualizing
+        complex data stories.
+      </p>
+    </article>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> Emmanuel Rueda · 
+    <a href="https://github.com/EmmanuelRE8" target="_blank">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/emmanuelre/" target="_blank">LinkedIn</a>
+  </p>
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

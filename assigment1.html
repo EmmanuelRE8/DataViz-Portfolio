@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Why Are Concerts So Crowded? – Data Comic · Emmanuel Rueda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ===== PALETTE (same as main site) ===== */
+    /* Night: #061417 | Teal dark: #012C3C | Blue mid: #285669
+       Taupe: #928477 | Light warm: #C6BFBB */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      background-image: url("../img/image-asset.webp");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+      background-color: rgba(6, 20, 23, 0.82);
+      background-blend-mode: multiply;
+
+      color: #E5E7EB;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #C6BFBB;
+      border-bottom: 1px solid transparent;
+    }
+
+    .back-link:hover {
+      border-bottom-color: #C6BFBB;
+    }
+
+    .case-title {
+      font-size: 1.9rem;
+      margin: 0.8rem 0 0.3rem;
+      color: #F9FAFB;
+    }
+
+    .case-subtitle {
+      font-size: 0.95rem;
+      color: #C6BFBB;
+      margin: 0 0 0.8rem;
+    }
+
+    .case-meta {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #928477;
+    }
+
+    /* ===== LAYOUT: STICKY VISUAL + SCROLL TEXT ===== */
+
+    .case-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .case-visual {
+      flex: 0 0 40%;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .case-visual-inner {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 1.1rem 1.1rem 1.2rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(198, 191, 187, 0.8);
+    }
+
+    .case-visual img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .visual-caption {
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      color: #4B5563;
+    }
+
+    .case-content {
+      flex: 1;
+    }
+
+    .case-section {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      border-radius: 14px;
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(198, 191, 187, 0.7);
+      color: #061417;
+    }
+
+    .case-section h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.4rem;
+      color: #285669;
+    }
+
+    .case-section p {
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #222222;
+    }
+
+    .case-section ul {
+      margin: 0.4rem 0 0.4rem 1.2rem;
+      padding: 0;
+      font-size: 0.95rem;
+      color: #222222;
+    }
+
+    .case-section li {
+      margin-bottom: 0.25rem;
+    }
+
+    .case-image {
+      width: 100%;
+      max-width: 860px;
+      display: block;
+      margin: 1.3rem auto 0.2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .case-image-caption {
+      font-size: 0.8rem;
+      color: #4B5563;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #C6BFBB;
+      text-align: left;
+    }
+
+    footer a {
+      color: #C6BFBB;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    footer a:hover {
+      border-bottom-color: #C6BFBB;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 880px) {
+      .case-layout {
+        flex-direction: column;
+      }
+
+      .case-visual {
+        position: static;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-shell {
+        padding: 1.8rem 1.1rem 2.5rem;
+      }
+      .case-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-shell">
+  <header>
+    <a href="../index.html" class="back-link">← Back to portfolio</a>
+    <p class="case-meta">Ontario Tech University · Data Visualization & Storytelling · Individual Project</p>
+    <h1 class="case-title">Why Are Concerts So Crowded? – A Data Comic</h1>
+    <p class="case-subtitle">
+      A comic-style narrative that uses real live-music revenue data to explain why concerts feel more crowded than ever,
+      blending illustration, dialogue, and charts into a single scrolling story.
+    </p>
+  </header>
+
+  <main class="case-layout">
+
+    <!-- LEFT: STICKY COMIC PREVIEW -->
+    <aside class="case-visual">
+      <div class="case-visual-inner">
+        <!-- Main comic image -->
+        <img src="../img/Comic - A1.png" alt="Data comic about crowded concerts" />
+        <p class="visual-caption">
+          Main comic layout. As you scroll through the case study, this preview stays in place while the process and details
+          unfold on the right.
+        </p>
+      </div>
+    </aside>
+
+    <!-- RIGHT: SCROLLING CONTENT -->
+    <section class="case-content">
+
+      <!-- Overview -->
+      <article class="case-section">
+        <h2>Overview</h2>
+        <p>
+          This project explores why concerts feel more crowded than ever by turning a data-driven explanation into
+          a comic-style narrative. Using real live-music revenue data and a series of illustrated scenes, the comic
+          blends storytelling, humor, and charts to explain how post-pandemic demand, long-term industry growth,
+          and cultural shifts all converge in the current live-music boom.
+        </p>
+      </article>
+
+      <!-- The Story -->
+      <article class="case-section">
+        <h2>The Story</h2>
+        <p>
+          The comic follows two friends attending several concerts in Toronto in 2025 — from Kylie Minogue to
+          Kendrick Lamar &amp; SZA and Coldplay. At every show, they keep noticing the same thing:
+          <em>“OMG, it’s so crowded!”</em>
+        </p>
+        <p>
+          Their conversation becomes the narrative spine of the piece. As they react to the crowd, they gradually
+          introduce real data:
+        </p>
+        <ul>
+          <li>how global live-music revenues grew before and after the pandemic,</li>
+          <li>why touring has become a primary source of income for artists,</li>
+          <li>and how streaming, social media, and generational preferences all push people towards live experiences.</li>
+        </ul>
+        <p>
+          By the final panels, the characters realize that what feels like a post-pandemic exception is actually the
+          visible part of a long-running structural trend in the live-music industry.
+        </p>
+
+        <!-- Example storyboard image (replace with your real file) -->
+        <img class="case-image" src="../img/a1_storyboard.png" alt="Storyboard sketches for the data comic" />
+        <p class="case-image-caption">Early storyboard sketches used to structure scenes, pacing, and data placement.</p>
+      </article>
+
+      <!-- Data & Insight -->
+      <article class="case-section">
+        <h2>Data &amp; Key Insight</h2>
+        <p>
+          The charts embedded in the comic highlight two main ideas:
+        </p>
+        <ul>
+          <li>
+            <strong>The rebound effect after COVID-19.</strong> There is a visible spike in global live-music revenues
+            in the years immediately after the pandemic, as audiences return to concerts and festivals.
+          </li>
+          <li>
+            <strong>The long-term structural growth.</strong> When looking at a longer time span (2004–2025), live-music
+            revenues have been growing steadily for years. COVID-19 appears more as a temporary setback than the main
+            cause of the trend.
+          </li>
+        </ul>
+        <p>
+          The key insight:
+          <em>
+            crowded concerts are not just a “post-COVID” phenomenon. They are the outcome of long-term shifts in how music
+            is produced, monetized, and experienced.
+          </em>
+        </p>
+
+        <!-- Example data chart image -->
+        <img class="case-image" src="../img/a1_chart_revenues.png" alt="Live-music revenues chart used in the comic" />
+        <p class="case-image-caption">One of the revenue charts embedded directly into the comic layout.</p>
+      </article>
+
+      <!-- Creative Process -->
+      <article class="case-section">
+        <h2>Creative Process</h2>
+        <p><strong>1. Concept and narrative framing.</strong></p>
+        <p>
+          I started with a simple question – <em>“Why are all my concerts so packed?”</em> – and decided to answer it
+          through a comic rather than a traditional dashboard. The goal was to make the explanation feel personal, visual,
+          and emotionally relatable.
+        </p>
+
+        <p><strong>2. Storyboarding.</strong></p>
+        <p>
+          Before designing any final panel, I sketched a storyboard that defined the main scenes, where the charts would
+          appear, and how the dialogue would introduce each data point. This helped control pacing: setting up the problem,
+          revealing the data, and landing the conclusion without overwhelming readers.
+        </p>
+
+        <p><strong>3. Visual design and illustration.</strong></p>
+        <p>
+          I used a colorful, comic-book aesthetic — speech bubbles, sound effects, strong contrasts and crowd silhouettes —
+          to create an energetic atmosphere. The characters act as guides, reacting to the environment and asking the
+          questions that the audience might have.
+        </p>
+
+        <p><strong>4. Data integration.</strong></p>
+        <p>
+          The charts are embedded inside the comic as part of the world: a panel becomes a graph, a speech bubble points
+          to a revenue curve, and annotations highlight key years. This keeps the data present without breaking the
+          narrative flow.
+        </p>
+
+        <p><strong>5. Assembly and refinement.</strong></p>
+        <p>
+          Once the panels, charts, and text were ready, I arranged them vertically so the piece works as a scrolling
+          experience. I edited the dialogue to keep it concise and focused on the main story: from crowded venues to the
+          bigger picture of the live-music industry.
+        </p>
+      </article>
+
+      <!-- Tools -->
+      <article class="case-section">
+        <h2>Tools Used</h2>
+        <p>
+          <strong>Canva</strong> – comic layout, illustration composition, speech bubbles, and visual effects.<br />
+          <strong>Flourish</strong> – creation of the bar/column charts for global live-music revenues.<br />
+          <strong>Storyboard sketches &amp; drawing tools</strong> – to plan pacing, panel sequence, and data placement.<br />
+          <strong>Image editing tools</strong> (e.g., GIMP/Photoshop) – minor color and layout adjustments.
+        </p>
+      </article>
+
+      <!-- Reflection -->
+      <article class="case-section">
+        <h2>What I Learned</h2>
+        <p>
+          This assignment helped me practice translating quantitative analysis into a narrative format that feels
+          approachable and memorable. In particular, I learned how to:
+        </p>
+        <ul>
+          <li>Use characters and dialogue to make complex trends more intuitive.</li>
+          <li>Integrate charts into a visual story world without losing readability.</li>
+          <li>Balance aesthetics and clarity so the piece is fun to read but still analytically grounded.</li>
+        </ul>
+        <p>
+          Overall, this project is a strong example of how I combine analytical thinking with creative visual storytelling
+          to communicate insights in ways that people actually remember.
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Emmanuel Rueda ·
+      <a href="https://github.com/EmmanuelRE8" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/emmanuelre/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
